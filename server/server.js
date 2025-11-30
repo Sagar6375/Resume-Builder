@@ -13,9 +13,13 @@ const app=express();
 const PORT=process.env.PORT||3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "*",   // or Vercel frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type, Authorization"
+}));
 
-app.get('/', (req, res)=> res.send("Server is live..."));
+app.get('/', (req, res)=> res.send("Server is live22..."));
 app.use('/api/users', userRouter);
 app.use('/api/resumes', resumeRouter);
 app.use('/api/ai', aiRouter);
