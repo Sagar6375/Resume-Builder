@@ -5,6 +5,7 @@ import connectDB from "./configs/db.js";
 import userRouter from "./routes/userRoutes.js";
 import resumeRouter from "./routes/resumeRoutes.js";
 import aiRouter from "./routes/aiRoutes.js";
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 //data base connection
 
