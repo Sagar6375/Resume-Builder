@@ -12,6 +12,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const ai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.GEMINI_API_KEY,
   baseURL: "https://api.groq.com/openai/v1", // IMPORTANT
 });
